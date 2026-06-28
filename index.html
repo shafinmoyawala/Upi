@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Detection System</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= Animated Background ================= -->
+
+<div class="background">
+
+    <span>💳</span>
+    <span>🏦</span>
+    <span>📱</span>
+    <span>💸</span>
+    <span>🔒</span>
+    <span>⚡</span>
+
+</div>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h2>UPI Fraud Detection</h2>
+
+    </div>
+
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="glass">
+
+<h1>UPI Fraud Detection System</h1>
+
+<p>
+
+Analyze your UPI transaction before making payment.
+
+Our intelligent fraud detector checks
+
+UPI validity,
+
+bank provider,
+
+transaction amount,
+
+and scam keywords
+
+to estimate fraud risk.
+
+</p>
+
+<div class="inputBox">
+
+<label>Receiver UPI ID</label>
+
+<input
+type="text"
+id="upiID"
+placeholder="example@oksbi">
+
+</div>
+
+<div class="inputBox">
+
+<label>Transaction Amount (₹)</label>
+
+<input
+type="number"
+id="amount"
+placeholder="5000">
+
+</div>
+
+<div class="inputBox">
+
+<label>Description</label>
+
+<textarea
+id="description"
+placeholder="Refund, Gift, Urgent Payment..."></textarea>
+
+</div>
+
+<button id="analyzeBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Analyze Transaction
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= RESULT ================= -->
+
+<section class="resultSection">
+
+<div class="resultCard">
+
+<h2>
+
+<i class="fa-solid fa-chart-line"></i>
+
+Fraud Analysis
+
+</h2>
+
+<div class="meter">
+
+<div id="progressBar"></div>
+
+</div>
+
+<h1 id="riskScore">
+
+0%
+
+</h1>
+
+<h3 id="riskLevel">
+
+Waiting For Analysis...
+
+</h3>
+
+</div>
+
+</section>
+
+<!-- ================= STATUS CARDS ================= -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<h3>UPI Status</h3>
+
+<p id="upiStatus">--</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h3>Bank</h3>
+
+<p id="bankStatus">--</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+<h3>Amount Risk</h3>
+
+<p id="amountStatus">--</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+<h3>Keyword Detection</h3>
+
+<p id="keywordStatus">--</p>
+
+</div>
+
+</section>
+
+<!-- ================= REASONS ================= -->
+
+<section class="reasonBox">
+
+<h2>
+
+<i class="fa-solid fa-list"></i>
+
+Fraud Reasons
+
+</h2>
+
+<ul id="reasonList">
+
+<li>No Analysis Yet.</li>
+
+</ul>
+
+</section>
+
+<div class="resultCard">
+
+    <h2>
+        <i class="fa-solid fa-circle-info"></i>
+        Final Result
+    </h2>
+
+    <h1 id="finalResult" class="final-result">
+        Waiting for Analysis...
+    </h1>
+
+</div>
+
+<!-- ================= RECOMMENDATION ================= -->
+
+<section class="recommendation">
+
+<h2>
+
+<i class="fa-solid fa-lightbulb"></i>
+
+Recommendation
+
+</h2>
+
+<p id="recommendationText">
+
+Analyze transaction to receive recommendation.
+
+</p>
+
+</section>
+
+<!-- ================= HISTORY ================= -->
+
+<section class="history">
+
+<h2>
+
+<i class="fa-solid fa-clock-rotate-left"></i>
+
+Recent Analysis
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Date</th>
+
+<th>UPI</th>
+
+<th>Amount</th>
+
+<th>Risk</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historyTable">
+
+<tr>
+
+<td colspan="4">
+
+No Transactions Yet
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+<div class="feature">
+
+<i class="fa-solid fa-shield-virus"></i>
+
+<h3>Fraud Detection</h3>
+
+<p>Smart rule-based fraud analysis.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-money-check-dollar"></i>
+
+<h3>Amount Analysis</h3>
+
+<p>Detects risky transaction values.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-credit-card"></i>
+
+<h3>UPI Validation</h3>
+
+<p>Checks UPI ID format instantly.</p>
+
+</div>
+
+<div class="feature">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>Cyber Security</h3>
+
+<p>Stay safe from UPI scams.</p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026
+
+UPI Fraud Detection System
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

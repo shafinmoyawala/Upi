@@ -1,0 +1,409 @@
+/* ===== RESET ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#081421;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== BACKGROUND ===== */
+
+.background{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.background span{
+    position:absolute;
+    font-size:40px;
+    opacity:.08;
+    animation:float 15s linear infinite;
+}
+
+.background span:nth-child(1){top:10%;left:10%;}
+.background span:nth-child(2){top:25%;left:80%;}
+.background span:nth-child(3){top:60%;left:20%;}
+.background span:nth-child(4){top:75%;left:70%;}
+.background span:nth-child(5){top:40%;left:50%;}
+.background span:nth-child(6){top:5%;left:60%;}
+
+@keyframes float{
+
+0%{transform:translateY(0);}
+100%{transform:translateY(-120px) rotate(360deg);}
+
+}
+
+/* ===== NAVBAR ===== */
+
+nav{
+
+background:#0d1b2a;
+padding:20px;
+display:flex;
+justify-content:center;
+box-shadow:0 2px 10px rgba(0,0,0,.4);
+
+}
+
+.logo{
+
+display:flex;
+gap:10px;
+align-items:center;
+
+}
+
+.logo i{
+
+font-size:30px;
+color:#00e6b8;
+
+}
+
+.logo h2{
+
+color:#00e6b8;
+
+}
+
+/* ===== HERO ===== */
+
+.hero{
+
+display:flex;
+justify-content:center;
+padding:40px 20px;
+
+}
+
+.glass{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
+width:90%;
+max-width:800px;
+
+}
+
+.glass h1{
+
+text-align:center;
+color:#00ffd0;
+margin-bottom:15px;
+
+}
+
+.glass p{
+
+text-align:center;
+margin-bottom:30px;
+color:#ddd;
+
+}
+
+.inputBox{
+
+margin-bottom:20px;
+
+}
+
+.inputBox label{
+
+display:block;
+margin-bottom:8px;
+
+}
+
+.inputBox input,
+.inputBox textarea{
+
+width:100%;
+padding:15px;
+border:none;
+outline:none;
+border-radius:10px;
+background:#13263c;
+color:white;
+font-size:16px;
+
+}
+
+textarea{
+
+resize:none;
+height:120px;
+
+}
+
+/* ===== BUTTON ===== */
+
+button{
+
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:#00e6b8;
+color:#081421;
+font-size:18px;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#00b894;
+transform:scale(1.02);
+
+}
+
+/* ===== RESULT ===== */
+
+.resultSection{
+
+padding:30px;
+
+}
+
+.resultCard{
+
+width:90%;
+max-width:800px;
+margin:auto;
+background:#10263b;
+padding:30px;
+border-radius:20px;
+text-align:center;
+
+}
+
+.meter{
+
+height:20px;
+background:#23384d;
+border-radius:20px;
+overflow:hidden;
+margin:20px 0;
+
+}
+
+#progressBar{
+
+height:100%;
+width:0%;
+background:lime;
+transition:1s;
+
+}
+
+#riskScore{
+
+font-size:50px;
+margin:15px 0;
+
+}
+
+/* ===== CARDS ===== */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+width:90%;
+margin:30px auto;
+
+}
+
+.card{
+
+background:#10263b;
+padding:25px;
+text-align:center;
+border-radius:15px;
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.card i{
+
+font-size:40px;
+color:#00ffd0;
+margin-bottom:15px;
+
+}
+
+/* ===== REASONS ===== */
+
+.reasonBox,
+.recommendation,
+.history{
+
+width:90%;
+max-width:1000px;
+margin:30px auto;
+background:#10263b;
+padding:25px;
+border-radius:20px;
+
+}
+
+.reasonBox h2,
+.recommendation h2,
+.history h2{
+
+margin-bottom:20px;
+color:#00ffd0;
+
+}
+
+.reasonBox ul{
+
+padding-left:20px;
+
+}
+
+.reasonBox li{
+
+margin:10px 0;
+
+}
+
+/* ===== TABLE ===== */
+
+table{
+
+width:100%;
+border-collapse:collapse;
+
+}
+
+th,td{
+
+padding:12px;
+text-align:center;
+border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+th{
+
+background:#00e6b8;
+color:#081421;
+
+}
+
+/* ===== FEATURES ===== */
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+width:90%;
+margin:40px auto;
+
+}
+
+.feature{
+
+background:#10263b;
+padding:25px;
+text-align:center;
+border-radius:15px;
+transition:.3s;
+
+}
+
+.feature:hover{
+
+transform:translateY(-5px);
+
+}
+
+.feature i{
+
+font-size:40px;
+margin-bottom:15px;
+color:#00ffd0;
+
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+
+text-align:center;
+padding:20px;
+background:#0d1b2a;
+margin-top:40px;
+
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+.glass{
+
+padding:20px;
+
+}
+
+.glass h1{
+
+font-size:28px;
+
+}
+
+#riskScore{
+
+font-size:35px;
+
+}
+
+.cards,
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+table{
+
+font-size:14px;
+
+}
+
+}
+.final-result{
+
+    margin-top:20px;
+    font-size:32px;
+    font-weight:bold;
+    text-align:center;
+
+}
